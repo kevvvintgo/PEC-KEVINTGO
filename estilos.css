@@ -1,0 +1,495 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+header, nav, nav ul {
+    background: transparent;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: transparent;
+    position: relative;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+nav ul li a {
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 20px;
+}
+main {
+    padding-top: 80px;
+}
+header h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2rem;
+    color: #003366;
+    margin: 0;
+    font-size: 2.5em;
+}
+header img {
+    height: 60px;
+    width: auto;
+}
+nav {
+    flex: 1;
+
+}
+nav a:hover {
+    background-color: #002452;
+    transform: scale(1.1);
+    color: white;
+    border-radius: 15px;
+    padding: 5px;
+    transition: ease-in;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+section {
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 60vh;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.logo {
+    width: 170px;
+    flex-shrink: 0;
+}
+#Inicio {
+    background-color: #00A6A6;
+    width: 97%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    margin-top: 0;
+}
+#Conoce {
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    background-color: rgb(255, 70, 70);
+}
+#Conoce h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+#Conoce > h2 {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 20px;
+}
+.emotionality, .Calmity {
+    display: inline-block;
+    width: 200px;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: top;
+    transition: transform 0.3s;
+}
+.emotionality:hover, .Calmity:hover {
+    transform: translateY(-10px);
+}
+.emotionality img, .Calmity img {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+}
+.emotionality h3, .Calmity h3 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+#info-emocion {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+#info-emocion h2 {
+    margin-bottom: 15px;
+}
+#info-emocion p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+#nombre-emocion {
+    font-size: 28px;
+}
+#nombre-emocion.felicity {
+    color: #FFD43B;
+}
+#nombre-emocion.tristesity {
+    color: #4A90E2;
+}
+#nombre-emocion.enojity {
+    color: #E53935;
+}
+#nombre-emocion.amorosity {
+    color: #F06292;
+}
+#nombre-emocion.frustacity {
+    color: #FF8C42;
+}
+#nombre-emocion.miedisity {
+    color: #8E6BBE;
+}
+#nombre-emocion.sorpresity {
+    color: #00A6A6;
+}
+#nombre-emocion.calmity {
+    color: #4CAF50;
+}
+#nombre-emocion.verguenza {
+    color: #9C6ADE;
+}
+#nombre-emocion.nerviosity {
+    color: #E88BB5;
+}
+#Miespacio {
+    text-align: center;
+    padding: 70px 20px;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+background-color: #8E6BBE;}
+#Miespacio h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+#Miespacio > h2 {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 20px;
+}
+.estado-emocional {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+.estado-emocional > h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+.emociones-espacio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.emociones-espacio button {
+    border: none;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #eeeeee;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.emociones-espacio button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+#estado-seleccionado {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    display: none;
+    background-color: #f5f5f5;
+}
+#estado-seleccionado h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+#estado-seleccionado p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.emociones-espacio button.felicity {
+    background-color: #FFD43B;
+}
+.emociones-espacio button.tristesity {
+    background-color: #4A90E2;
+    color: white;
+}
+.emociones-espacio button.enojity {
+    background-color: #E74C3C;
+    color: white;
+}
+.emociones-espacio button.anxiety {
+    background-color: #8E6BBE;
+    color: white;
+}
+.emociones-espacio button.frustacity {
+    background-color: #FF8C42;
+    color: white;
+}
+.emociones-espacio button.insegurity {
+    background-color: #708090;
+    color: white;
+}
+.emociones-espacio button.soledity {
+    background-color: #607D8B;
+    color: white;
+}
+.emociones-espacio button.calmity {
+    background-color: #4CAF50;
+    color: white;
+}
+.emociones-espacio button.verguenzity {
+    background-color: #9B7EBD;
+    color: white;
+}
+.emociones-espacio button.presionity {
+    background-color: #C85A8E;
+    color: white;
+}
+#historial-emocional {
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+#historial-emocional h2 {
+    margin-bottom: 20px;
+}
+#lista-emociones p {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.mi-diario {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+.mi-diario h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.mi-diario > p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#entrada-diario {
+    width: 90%;
+    min-height: 150px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 17px;
+    outline: none;
+}
+#entrada-diario:focus {
+    border-color: #8E6BBE;
+}
+.mi-diario > button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    background-color: #8E6BBE;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.mi-diario > button:hover {
+    transform: translateY(-2px);
+}
+#entradas-diario {
+    margin-top: 35px;
+}
+#entradas-diario h3 {
+    margin-bottom: 20px;
+}
+.entrada {
+    padding: 18px;
+    margin-bottom: 15px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    text-align: left;
+}
+.entrada .fecha {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.entrada p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0;
+}
+#Herramientas {
+    text-align: center;
+    padding: 70px 20px;
+    margin: auto;
+    background-color: #E74C3C;
+}
+#Herramientas h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+#Herramientas > h2 {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 20px;
+    font-weight: normal;
+}
+.herramientas-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+.herramienta {
+    width: 280px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+.herramienta h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.herramienta p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+.herramienta button {
+    margin-top: 15px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 12px;
+    background-color: #3c3c3d;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.herramienta button:hover {
+    transform: translateY(-3px);
+}
+#respiracion {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#temporizador {
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#Miperfil {
+    text-align: center;
+    padding: 70px 20px;
+    min-height: 60vh;
+    background-color: #FFD43B;
+}
+#Miperfil h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+#Miperfil > h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.perfil {
+    max-width: 600px;
+    margin: auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+.perfil h3 {
+    font-size: 23px;
+}
+#nombre-usuario {
+    width: 80%;
+    padding: 13px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 17px;
+}
+.perfil button {
+    display: block;
+    margin: 15px auto;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    background-color: #8E6BBE;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#saludo-perfil {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 16px;
+}

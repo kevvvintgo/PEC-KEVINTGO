@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emocionality | Tus Emociones Amigablemente</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="imgs/logo.png" alt="Logo Emocionality" style="height: 100px;">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#Inicio">Inicio</a></li>
+                    <li><a href="#Conoce">Conoce</a></li>
+                    <li><a href="#Miespacio">Mi Espacio</a></li>
+                    <li><a href="#Herramientas">Herramientas</a></li>
+                    <li><a href="#Miperfil">Mi Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="Inicio">
+        <h1>¿Quienes Somos?</h1>
+        <h2>Emocionality</h2>
+        <p>En Emotionality creamos un espacio pensado especialmente para que los niños puedan conocer, entender y expresar sus emociones de una manera fácil y divertida. Sabemos que a veces puede ser difícil explicar cómo nos sentimos, por eso nuestra página ofrece información, actividades y herramientas que ayudan a los niños a identificar sus emociones, aprender sobre ellas y descubrir diferentes formas de expresarlas. Nuestro objetivo es que cada niño pueda entender que todas las emociones son importantes y que está bien sentirse feliz, triste, enojado, asustado o preocupado. Emotionality busca acompañarlos en el proceso de conocerse mejor y aprender a cuidar su bienestar emocional.</p>
+    </section>
+    <section id="Conoce">
+        <h1>Conoce Tus Emociones</h1>
+        <h2>¡Conoce a nuestros Emotionalities! Cada uno representa una emoción diferente. ¡Haz clic en ellos para conocerlos!</h2>
+        <div class="emotionality felicity" onclick="mostrarEmocion('felicity')">
+            <img src="imgs/felicity.png" alt="Happy yellow circular face with wide open eyes, a bright smile, and rosy cheeks, set against a plain black background, expressing a cheerful and friendly emotional tone.">
+            <h3>Felicity</h3>
+        </div>
+        <div class="emotionality tristesity" onclick="mostrarEmocion('tristesity')">
+            <img src="imgs/tristesity.png" alt="Tristesity">
+            <h3>Tristesity</h3>
+        </div>
+        <div class="emotionality enojity" onclick="mostrarEmocion('enojity')">
+            <img src="imgs/enojity.png" alt="Enojity">
+            <h3>Enojity</h3>
+        </div>
+        <div class="emotionality anxiety" onclick="mostrarEmocion('anxiety')">
+            <img src="imgs/anxiety.png" alt="Anxiety">
+            <h3>Anxiety</h3>
+        </div>
+        <div class="emotionality frustacity" onclick="mostrarEmocion('frustacity')">
+            <img src="imgs/frustadity.png" alt="Frustacity">
+            <h3>Frustacity</h3>
+        </div>
+        <div class="emotionality insegurity" onclick="mostrarEmocion('insegurity')">
+            <img src="imgs/insegurity.png" alt="insegurity">
+            <h3>Insegurity</h3>
+        </div>
+        <div class="emotionality soledity" onclick="mostrarEmocion('soledity')">
+            <img src="imgs/soledity.png" alt="Soledity">
+            <h3>Soledity</h3>
+        </div>
+        <div class="emotionality calmity" onclick="mostrarEmocion('calmity')">
+            <img src="imgs/calmadity.png" alt="Calmity">
+            <h3>Calmity</h3>
+        </div>
+        <div class="emotionality vergüenzity" onclick="mostrarEmocion('vergüenzity')">
+            <img src="imgs/verguensity.png" alt="Vergüenzity">
+            <h3>Vergüenzity</h3>
+        </div>
+        <div class="emotionality presionity" onclick="mostrarEmocion('presionity')">
+            <img src="imgs/presionity.png" alt="Nerviosity">
+            <h3>Presionity</h3>
+        </div>
+        <div id="info-emocion">
+            <h2 id="nombre-emocion"></h2>
+            <p id="descripcion-emocion"></p>
+        </div>
+    </section>
+    <section id="Miespacio">
+        <h1>Mi Espacio</h1>
+        <h2>Un lugar para detenerte un momento y reconocer cómo te sientes.</h2>
+        <div class="estado-emocional">
+            <h2>¿Cómo te sientes hoy?</h2>
+            <div class="emociones-espacio">
+                <button class="felicity" onclick="seleccionarEstado('felicity')">Felicity</button>
+                <button class="tristesity" onclick="seleccionarEstado('tristesity')">Tristesity</button>
+                <button class="enojity" onclick="seleccionarEstado('enojity')">Enojity</button>
+                <button class="anxiety" onclick="seleccionarEstado('anxiety')">Anxiety</button>
+                <button class="frustacity" onclick="seleccionarEstado('frustacity')">Frustacity</button>
+                <button class="insegurity" onclick="seleccionarEstado('insegurity')">Insegurity</button>
+                <button class="soledity" onclick="seleccionarEstado('soledity')">Soledity</button>
+                <button class="calmity" onclick="seleccionarEstado('calmity')">Calmity</button>
+                <button class="verguenzity" onclick="seleccionarEstado('verguenzity')">Vergüenzity</button>
+                <button class="presionity" onclick="seleccionarEstado('presionity')">Presionity</button>
+            </div>
+            <div id="estado-seleccionado"></div>
+            <div id="historial-emocional">
+                <h2>Mis emociones recientes</h2>
+                <div id="lista-emociones"></div>
+            </div>
+        </div>
+        <div class="mi-diario">
+            <h2>Mi Diario</h2>
+            <p>Escribe lo que quieras sobre cómo fue tu día.</p>
+            <textarea id="entrada-diario" placeholder="Hoy me sentí..."></textarea>
+            <button onclick="guardarEntrada()">Guardar entrada</button>
+            <div id="entradas-diario">
+                <h3>Mis entradas recientes</h3>
+                <div id="lista-entradas"></div>
+            </div>
+        </div>
+    </section>
+    <section id="Herramientas">
+        <h1>Herramientas</h1>
+        <h2>Recursos sencillos para ayudarte a hacer una pausa y cuidar tu bienestar emocional.</h2>
+        <div class="herramientas-contenedor">
+            <div class="herramienta">
+                <h3>Respiración</h3>
+                <p>Tómate un momento para respirar lentamente y relajarte.</p>
+                <button onclick="ejercicioRespiracion()">Comenzar</button>
+                <div id="respiracion"></div>
+            </div>
+            <div class="herramienta">
+                <h3>Pausa de un minuto</h3>
+                <p>Aléjate un momento de lo que estás haciendo y date un pequeño descanso.</p>
+                <button onclick="iniciarPausa()">Comenzar</button>
+                <div id="temporizador">60</div>
+            </div>
+            <div class="herramienta">
+                <h3>Reflexiona</h3>
+                <p id="frase-reflexion">Haz clic para recibir una pregunta para reflexionar.</p>
+                <button onclick="nuevaReflexion()">Reflexionar</button>
+            </div>
+        </div>
+    </section>
+    <section id="Miperfil">
+        <h1>Mi Perfil</h1>
+        <h2>Personaliza tu espacio en Emotionality.</h2>
+        <div class="perfil">
+            <h3>¿Cómo quieres que te llamemos?</h3>
+            <input type="text" id="nombre-usuario" placeholder="Escribe tu nombre">
+            <button onclick="guardarPerfil()">Guardar</button>
+            <div id="saludo-perfil"></div>
+        </div>
+    </section>
+    <footer>
+    <h2>Emotionality</h2>
+    <p>Un espacio para conocer, entender y expresar lo que sentimos.</p>
+    <p>© 2026 Emotionality | Todos los derechos reservados.</p>
+</footer>
+    <script src="script1.js"></script>
+</body>
+</html>
+```
